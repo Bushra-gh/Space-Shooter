@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cyqqgordmh7pa"]
 
 [ext_resource type="Script" uid="uid://bg5byi1nmovea" path="res://scenes/meteor.gd" id="1_pxso2"]
-[ext_resource type="Texture2D" uid="uid://c0msc08ewnvhp" path="res://PNG/Meteors/meteorBrown_big1.png" id="1_tcwo0"]
+[ext_resource type="Texture2D" uid="uid://c0msc08ewnvhp" path="res://PNG/Meteors/1.png" id="1_tcwo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_83eji"]
 radius = 44.011364
 
 [node name="meteor" type="Area2D" unique_id=1521896205]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_pxso2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=247214792]

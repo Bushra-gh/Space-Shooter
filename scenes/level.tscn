@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dyys16d60e4g2" path="res://scenes/level.gd" id="1_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://clkn5y4leobw2" path="res://Backgrounds/darkPurple.png" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="2_mx8sn"]
-[ext_resource type="PackedScene" uid="uid://cyqqgordmh7pa" path="res://scenes/meteor.tscn" id="3_ppgk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(149, 655)
@@ -20,38 +19,44 @@ scale = Vector2(5.59961, 3.9960938)
 texture = ExtResource("1_w8frs")
 
 [node name="Player" parent="." unique_id=62252219 instance=ExtResource("2_mx8sn")]
-position = Vector2(215, 196)
-
-[node name="meteor" parent="." unique_id=156099277 instance=ExtResource("3_ppgk2")]
-position = Vector2(585, 207)
+position = Vector2(716, 504)
 
 [node name="Borders" type="Node2D" parent="." unique_id=1619352814]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=2012834954]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1179195619]
 position = Vector2(1228, 324)
 shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=423021979]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=200143499]
 position = Vector2(-76, 320)
 shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1468482559]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=17792459]
 position = Vector2(573, -110)
 shape = SubResource("RectangleShape2D_ppgk2")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=679155578]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=1584327139]
 position = Vector2(589, 759)
 shape = SubResource("RectangleShape2D_ppgk2")
 
 [node name="MeteorTimer" type="Timer" parent="." unique_id=631367898]
+wait_time = 0.3
 autostart = true
+
+[node name="Meteors" type="Node2D" parent="." unique_id=1878307456]
+
+[node name="Lasers" type="Node2D" parent="." unique_id=627463566]
 
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
