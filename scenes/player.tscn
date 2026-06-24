@@ -13,6 +13,7 @@ script = ExtResource("1_g2els")
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=699746491]
+position = Vector2(0, 2)
 polygon = PackedVector2Array(-7, -37, 7, -37, 12, -12, 35, 1, 47, -6, 46, 24, 13, 27, 7, 37, -7, 37, -13, 28, -45, 25, -48, -7, -38, 2, -14, -12)
 
 [node name="LaserStartpos" type="Marker2D" parent="." unique_id=1631416087]
@@ -27,5 +28,8 @@ stream = ExtResource("3_qhqgy")
 
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="." unique_id=1697321931]
 stream = ExtResource("4_dqkch")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2127196034]
+enabled = false
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
