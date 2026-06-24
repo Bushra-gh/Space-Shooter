@@ -15,4 +15,4 @@ This project was created while learning Godot and GDScript. The game allows the 
 
 1. Clone the repository.
 2. Open the project in Godot.
-3. Run the main scene.
+3. Run the level scene.
