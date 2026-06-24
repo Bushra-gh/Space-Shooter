@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bx13i38eaf4bv"]
 
+[ext_resource type="Script" uid="uid://u404xavtoiqi" path="res://scenes/game_over.gd" id="1_tbwuq"]
 [ext_resource type="FontFile" uid="uid://5h2x8rkfhn1n" path="res://Bonus/kenvector_future.ttf" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://dmgteuhrrtsvd" path="res://Bonus/kenvector_future_thin.ttf" id="2_tbwuq"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tbwuq")
 
 [node name="BG" type="ColorRect" parent="." unique_id=77119341]
 layout_mode = 1
@@ -42,7 +44,7 @@ text = "Game Over"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tbwuq")
 theme_override_font_sizes/font_size = 25
-text = "Score 0"
+text = "Score:"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=131944612]

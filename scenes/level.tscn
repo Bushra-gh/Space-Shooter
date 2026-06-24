@@ -30,6 +30,7 @@ script = ExtResource("1_mx8sn")
 position = Vector2(589.25, 382)
 scale = Vector2(5.59961, 3.9960938)
 texture = ExtResource("1_w8frs")
+metadata/_edit_lock_ = true
 
 [node name="Stars" type="Node2D" parent="." unique_id=1599490006]
 
